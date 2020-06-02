@@ -100,6 +100,13 @@ svc_smn_unmap:
     mov pc, lr
 .type svc_smn_unmap, %function;
 
+/* uint32_t svc_ecc_math(void *request) */
+.globl svc_ecc_math;
+svc_ecc_math:
+    svc #SVC_ECC_MATH
+    mov pc, lr
+.type svc_ecc_math, %function;
+
 /* void *svc_injected_map_x86_host_memory_ex(X86PADDR PhysX86AddrMap, uint32_t enmType, uint32_t fFlags) */
 .globl svc_injected_map_x86_host_memory_ex;
 svc_injected_map_x86_host_memory_ex:
